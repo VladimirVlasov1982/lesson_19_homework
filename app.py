@@ -33,8 +33,7 @@ def register_extensions(app):
     api.add_namespace(auth_ns)
 
 
-app = create_app(Config())
-app.debug = True
+app = create_app(Config)
 
 
 @app.errorhandler(404)
@@ -48,4 +47,4 @@ def iternal_error(error):
 
 
 if __name__ == '__main__':
-    app.run(host="localhost", port=10001, debug=True)
+    app.run(host="localhost", port=10001)
